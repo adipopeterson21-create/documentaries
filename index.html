@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peterson Documentaries - Kenyan History & Presidential Biographies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/254112696334?text=Hello%20Peterson%20Documentaries%2C%20I%20would%20like%20to%20know%20more%20about%20Kenyan%20history" 
+           target="_blank" 
+           class="whatsapp-link"
+           id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp!</span>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">PETERSON DOCUMENTARIES</h1>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#presidents" class="nav-link">Presidents</a></li>
+                    <li><a href="#history" class="nav-link">History</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <center>
+                <img src="assets/icons/images/Flag_of_Kenya.svg.png" width="120px" alt="Kenyan Flag" class="flag-img">
+            </center>
+            <h2>Preserving Kenyan Heritage Through Documentaries</h2>
+            <p>Exploring the rich history and influential leaders of Kenya</p>
+            <button class="cta-button" id="exploreBtn">Explore History</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search Kenyan history, presidents, events..." class="search-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👑</div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Presidents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number" data-target="62">0</div>
+                    <div class="stat-label">Years of Independence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏛️</div>
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">Political Eras</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Historical Events</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <h2>KENYAN PRESIDENTIAL HISTORY</h2>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <nav class="quick-nav" id="presidentsNav">
+            <button class="nav-btn active" data-section="jomo">Jomo Kenyatta</button>
+            <button class="nav-btn" data-section="moi">Daniel Moi</button>
+            <button class="nav-btn" data-section="kibaki">Mwai Kibaki</button>
+            <button class="nav-btn" data-section="uhuru">Uhuru Kenyatta</button>
+            <button class="nav-btn" data-section="ruto">William Ruto</button>
+            <button class="nav-btn" data-section="raila">Raila Odinga</button>
+        </nav>
+
+        <!-- Jomo Kenyatta Section -->
+        <article class="president-article active" id="jomo-section" data-president="jomo">
+            <div class="president-header">
+                <div class="president-image">
+                    <img src="assets/icons/images/Jomo_Kenyatta_(cropped)_in_June_15th,_1966.jpg" alt="Jomo Kenyatta" class="president-img">
+                    <div class="president-quick-facts">
+                        <h4>Quick Facts</h4>
+                        <div class="fact-item">
+                            <span class="fact-label">Born:</span>
+                            <span class="fact-value">1897</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Died:</span>
+                            <span class="fact-value">1978</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Term:</span>
+                            <span class="fact-value">1964-1978</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Party:</span>
+                            <span class="fact-value">KANU</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="president-info">
+                    <h3>JOMO KENYATTA</h3>
+                    <p class="president-title">First President of Kenya (1964-1978)</p>
+                    <div class="president-bio">
+                        <p>Jomo Kenyatta (c. 1897 – 22 August 1978) was a Kenyan anti-colonial activist and politician who governed Kenya as its Prime Minister from 1963 to 1964 and then as its first President from 1964 to his death in 1978.</p>
+                    </div>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Led Kenya to independence from British colonial rule</li>
+                            <li>Established the framework for modern Kenya</li>
+                            <li>Promoted African socialism through "Harambee" philosophy</li>
+                            <li>Developed infrastructure and education systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="president-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="early-life">Early Life</button>
+                    <button class="tab-btn" data-tab="political-career">Political Career</button>
+                    <button class="tab-btn" data-tab="presidency">Presidency</button>
+                    <button class="tab-btn" data-tab="legacy">Legacy</button>
+                </div>
+
+                <div class="tab-content active" id="early-life">
+                    <h4>Early Life and Education</h4>
+                    <p>Jomo Kenyatta was born Kamau wa Muigai in Gatundu, British East Africa. He received his early education at the Church of Scotland Mission in Kikuyu and later worked as a clerk in Nairobi.</p>
+                    <p>In 1929, he traveled to London to lobby for Kikuyu land affairs. He studied anthropology under Bronisław Malinowski at the London School of Economics and published his seminal work "Facing Mount Kenya" in 1938.</p>
+                </div>
+
+                <div class="tab-content" id="political-career">
+                    <h4>Political Career</h4>
+                    <p>Kenyatta became involved in African nationalist politics and served as president of the Kenya African Union from 1947. He was arrested in 1952 during the Mau Mau Uprising and spent seven years in detention.</p>
+                    <p>After his release in 1961, he led the Kenya African National Union (KANU) to victory in the 1963 general elections, becoming Prime Minister.</p>
+                </div>
+
+                <div class="tab-content" id="presidency">
+                    <h4>Presidency (1964-1978)</h4>
+                    <p>When Kenya became a republic in 1964, Kenyatta became President. His government promoted economic growth through capitalist policies and maintained close ties with the West.</p>
+                    <p>He centralized power, suppressed political opposition, and established a de facto one-party state. His leadership saw significant economic development but also increased corruption and ethnic favoritism.</p>
+                </div>
+
+                <div class="tab-content" id="legacy">
+                    <h4>Legacy</h4>
+                    <p>Kenyatta is remembered as the "Father of the Nation" who led Kenya to independence. His vision of "Harambee" (pulling together) emphasized national unity and self-reliance.</p>
+                    <p>However, his legacy is mixed, with critics pointing to authoritarian tendencies, corruption, and the establishment of a political dynasty.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Daniel Moi Section -->
+        <article class="president-article" id="moi-section" data-president="moi">
+            <div class="president-header">
+                <div class="president-image">
+                    <img src="assets/icons/images/Daniel_arap_Moi_1979c.jpg" alt="Daniel Moi" class="president-img">
+                    <div class="president-quick-facts">
+                        <h4>Quick Facts</h4>
+                        <div class="fact-item">
+                            <span class="fact-label">Born:</span>
+                            <span class="fact-value">1924</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Died:</span>
+                            <span class="fact-value">2020</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Term:</span>
+                            <span class="fact-value">1978-2002</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Party:</span>
+                            <span class="fact-value">KANU</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="president-info">
+                    <h3>DANIEL ARAP MOI</h3>
+                    <p class="president-title">Second President of Kenya (1978-2002)</p>
+                    <div class="president-bio">
+                        <p>Daniel Toroitich arap Moi (2 September 1924 – 4 February 2020) was a Kenyan politician who served as the second President of Kenya from 1978 to 2002. He was the country's longest-serving president.</p>
+                    </div>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Maintained stability during political transition</li>
+                            <li>Expanded education through 8-4-4 system</li>
+                            <li>Promoted national unity through "Nyayo" philosophy</li>
+                            <li>Infrastructure development across rural areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="president-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="moi-early">Early Life</button>
+                    <button class="tab-btn" data-tab="moi-political">Political Career</button>
+                    <button class="tab-btn" data-tab="moi-presidency">Presidency</button>
+                    <button class="tab-btn" data-tab="moi-legacy">Legacy</button>
+                </div>
+
+                <div class="tab-content active" id="moi-early">
+                    <h4>Early Life and Education</h4>
+                    <p>Daniel arap Moi was born in Kurieng'wo village in Baringo County. He trained as a teacher at the Tambach Teacher Training College and taught for several years before entering politics.</p>
+                    <p>His early political career began in the 1950s when he was elected to the Legislative Council representing the Rift Valley.</p>
+                </div>
+
+                <div class="tab-content" id="moi-political">
+                    <h4>Political Career</h4>
+                    <p>Moi served as Minister of Education in Kenyatta's government and later as Vice President from 1967 to 1978. He was known for his loyalty to Kenyatta and his ability to navigate complex political landscapes.</p>
+                    <p>After Kenyatta's death in 1978, Moi succeeded him as president, initially promising to follow in Kenyatta's footsteps ("Nyayo").</p>
+                </div>
+
+                <div class="tab-content" id="moi-presidency">
+                    <h4>Presidency (1978-2002)</h4>
+                    <p>Moi's presidency was marked by increasing authoritarianism, especially after the 1982 coup attempt. He transformed Kenya into a de jure one-party state in 1982.</p>
+                    <p>Under international pressure, he reintroduced multi-party politics in 1991. His government was criticized for human rights abuses, corruption, and economic mismanagement.</p>
+                </div>
+
+                <div class="tab-content" id="moi-legacy">
+                    <h4>Legacy</h4>
+                    <p>Moi is remembered for his "Nyayo" philosophy of peace, love, and unity. He expanded educational opportunities but his legacy is tarnished by allegations of corruption and authoritarian rule.</p>
+                    <p>His 24-year rule significantly shaped modern Kenya's political landscape.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Mwai Kibaki Section -->
+        <article class="president-article" id="kibaki-section" data-president="kibaki">
+            <div class="president-header">
+                <div class="president-image">
+                    <img src="assets/icons/images/Mwai_Kibaki_(cropped).jpg.webp" alt="Mwai Kibaki" class="president-img">
+                    <div class="president-quick-facts">
+                        <h4>Quick Facts</h4>
+                        <div class="fact-item">
+                            <span class="fact-label">Born:</span>
+                            <span class="fact-value">1931</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Term:</span>
+                            <span class="fact-value">2002-2013</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Party:</span>
+                            <span class="fact-value">NARC • PNU</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Education:</span>
+                            <span class="fact-value">Makerere • LSE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="president-info">
+                    <h3>MWAI KIBAKI</h3>
+                    <p class="president-title">Third President of Kenya (2002-2013)</p>
+                    <div class="president-bio">
+                        <p>Emilio Mwai Kibaki (born 15 November 1931) is a Kenyan retired politician who served as the third President of Kenya from 2002 to 2013. He was previously the fourth Vice President of Kenya from 1978 to 1988.</p>
+                    </div>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Economic growth averaging 5% annually</li>
+                            <li>Introduction of Free Primary Education</li>
+                            <li>Constitutional reform leading to 2010 Constitution</li>
+                            <li>Major infrastructure development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="president-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="kibaki-early">Early Life</button>
+                    <button class="tab-btn" data-tab="kibaki-political">Political Career</button>
+                    <button class="tab-btn" data-tab="kibaki-presidency">Presidency</button>
+                    <button class="tab-btn" data-tab="kibaki-legacy">Legacy</button>
+                </div>
+
+                <div class="tab-content active" id="kibaki-early">
+                    <h4>Early Life and Education</h4>
+                    <p>Mwai Kibaki was born in Gatuyaini village, Nyeri County. He excelled academically, attending Makerere University in Uganda where he earned a first-class honors degree in economics.</p>
+                    <p>He later studied at the London School of Economics, becoming one of Kenya's most educated leaders.</p>
+                </div>
+
+                <div class="tab-content" id="kibaki-political">
+                    <h4>Political Career</h4>
+                    <p>Kibaki entered politics in 1963 and held various ministerial positions including Finance Minister. He served as Vice President under Daniel arap Moi from 1978 to 1988.</p>
+                    <p>He founded the Democratic Party in 1991 and ran unsuccessfully for president in 1992 and 1997 before winning in 2002.</p>
+                </div>
+
+                <div class="tab-content" id="kibaki-presidency">
+                    <h4>Presidency (2002-2013)</h4>
+                    <p>Kibaki's presidency began with great promise under the "Kibaki Tosha" movement. His government introduced free primary education and oversaw significant economic growth.</p>
+                    <p>His second term was marred by the 2007-2008 post-election violence, but he successfully oversaw the implementation of the 2010 Constitution.</p>
+                </div>
+
+                <div class="tab-content" id="kibaki-legacy">
+                    <h4>Legacy</h4>
+                    <p>Kibaki is credited with revitalizing Kenya's economy and implementing crucial constitutional reforms. His economic policies transformed Kenya into one of Africa's fastest-growing economies.</p>
+                    <p>However, his legacy is complicated by the post-election violence and ongoing corruption challenges during his tenure.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Uhuru Kenyatta Section -->
+        <article class="president-article" id="uhuru-section" data-president="uhuru">
+            <div class="president-header">
+                <div class="president-image">
+                    <img src="assets/icons/images/President_Trump_Meets_with_the_President_of_the_Republic_of_Kenya_(49498271978)_(crop).jpg" alt="Uhuru Kenyatta" class="president-img">
+                    <div class="president-quick-facts">
+                        <h4>Quick Facts</h4>
+                        <div class="fact-item">
+                            <span class="fact-label">Born:</span>
+                            <span class="fact-value">1961</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Term:</span>
+                            <span class="fact-value">2013-2022</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Party:</span>
+                            <span class="fact-value">TNA • Jubilee</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Education:</span>
+                            <span class="fact-value">Amherst College</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="president-info">
+                    <h3>UHURU KENYATTA</h3>
+                    <p class="president-title">Fourth President of Kenya (2013-2022)</p>
+                    <div class="president-bio">
+                        <p>Uhuru Muigai Kenyatta (born 26 October 1961) is a Kenyan politician who served as the fourth President of Kenya from 2013 to 2022. He is the son of Kenya's first president, Jomo Kenyatta.</p>
+                    </div>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Digital transformation and innovation</li>
+                            <li>Major infrastructure projects (SGR, roads)</li>
+                            <li>Universal healthcare coverage</li>
+                            <li>Affordable housing program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="president-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="uhuru-early">Early Life</button>
+                    <button class="tab-btn" data-tab="uhuru-political">Political Career</button>
+                    <button class="tab-btn" data-tab="uhuru-presidency">Presidency</button>
+                    <button class="tab-btn" data-tab="uhuru-legacy">Legacy</button>
+                </div>
+
+                <div class="tab-content active" id="uhuru-early">
+                    <h4>Early Life and Education</h4>
+                    <p>Uhuru Kenyatta was born in Nairobi to Jomo Kenyatta and his fourth wife, Ngina Kenyatta. He attended St. Mary's School in Nairobi and later studied at Amherst College in the United States.</p>
+                    <p>Before entering politics, he worked in the horticulture and tourism industries.</p>
+                </div>
+
+                <div class="tab-content" id="uhuru-political">
+                    <h4>Political Career</h4>
+                    <p>Kenyatta entered politics in 1997 and served in Daniel Moi's government. He was nominated by Moi as his preferred successor in 2002 but lost to Mwai Kibaki.</p>
+                    <p>He served as Deputy Prime Minister and Minister of Finance in the grand coalition government from 2008 to 2013.</p>
+                </div>
+
+                <div class="tab-content" id="uhuru-presidency">
+                    <h4>Presidency (2013-2022)</h4>
+                    <p>Uhuru's presidency focused on his "Big Four" agenda: manufacturing, affordable housing, universal healthcare, and food security. His government oversaw major infrastructure projects including the Standard Gauge Railway.</p>
+                    <p>He faced challenges including the COVID-19 pandemic and ongoing corruption allegations.</p>
+                </div>
+
+                <div class="tab-content" id="uhuru-legacy">
+                    <h4>Legacy</h4>
+                    <p>Uhuru Kenyatta is credited with significant infrastructure development and digital transformation. His "Big Four" agenda aimed to transform Kenya's economic landscape.</p>
+                    <p>His legacy includes both major development projects and ongoing challenges with corruption and public debt.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- William Ruto Section -->
+        <article class="president-article" id="ruto-section" data-president="ruto">
+            <div class="president-header">
+                <div class="president-image">
+                    <img src="assets/icons/images/President_Ruto_Potrait_2022_(cropped).jpg" alt="William Ruto" class="president-img">
+                    <div class="president-quick-facts">
+                        <h4>Quick Facts</h4>
+                        <div class="fact-item">
+                            <span class="fact-label">Born:</span>
+                            <span class="fact-value">1966</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Term:</span>
+                            <span class="fact-value">2022-Present</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Party:</span>
+                            <span class="fact-value">UDA</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Education:</span>
+                            <span class="fact-value">University of Nairobi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="president-info">
+                    <h3>WILLIAM RUTO</h3>
+                    <p class="president-title">Fifth President of Kenya (2022-Present)</p>
+                    <div class="president-bio">
+                        <p>William Samoei Ruto (born 21 December 1966) is a Kenyan politician who has been serving as the fifth President of Kenya since 13 September 2022. He previously served as the Deputy President from 2013 to 2022.</p>
+                    </div>
+                    <div class="achievements">
+                        <h4>Key Focus Areas</h4>
+                        <ul>
+                            <li>Bottom-up economic model</li>
+                            <li>Affordable living costs</li>
+                            <li>Agricultural transformation</li>
+                            <li>MSME development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="president-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="ruto-early">Early Life</button>
+                    <button class="tab-btn" data-tab="ruto-political">Political Career</button>
+                    <button class="tab-btn" data-tab="ruto-presidency">Presidency</button>
+                    <button class="tab-btn" data-tab="ruto-policies">Policies</button>
+                </div>
+
+                <div class="tab-content active" id="ruto-early">
+                    <h4>Early Life and Education</h4>
+                    <p>William Ruto was born in Kamagut, Uasin Gishu County. He came from a humble background and famously sold chickens by the roadside to support his education.</p>
+                    <p>He earned a bachelor's degree in botany and zoology from the University of Nairobi and later a PhD in plant ecology.</p>
+                </div>
+
+                <div class="tab-content" id="ruto-political">
+                    <h4>Political Career</h4>
+                    <p>Ruto entered politics in 1997 as MP for Eldoret North. He served in various ministerial positions including Minister for Agriculture and Minister for Higher Education.</p>
+                    <p>He was Deputy President under Uhuru Kenyatta from 2013 to 2022 before running for president himself.</p>
+                </div>
+
+                <div class="tab-content" id="ruto-presidency">
+                    <h4>Presidency (2022-Present)</h4>
+                    <p>Ruto's presidency began with a focus on his "Bottom-Up" economic model aimed at empowering ordinary Kenyans. His administration has faced economic challenges including high living costs and debt burden.</p>
+                    <p>He has emphasized agricultural reform and support for small businesses.</p>
+                </div>
+
+                <div class="tab-content" id="ruto-policies">
+                    <h4>Policies and Vision</h4>
+                    <p>Ruto's key policies include the Hustler Fund for MSMEs, agricultural subsidies, and affordable housing. His vision centers on economic empowerment for the common citizen.</p>
+                    <p>His administration continues to navigate complex economic challenges while implementing its development agenda.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Historical Timeline Section -->
+        <section class="timeline-section" id="timeline">
+            <h3>KENYAN HISTORICAL TIMELINE</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1963</div>
+                    <div class="timeline-content">
+                        <h4>Independence</h4>
+                        <p>Kenya gains independence from British colonial rule</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1964</div>
+                    <div class="timeline-content">
+                        <h4>Republic Established</h4>
+                        <p>Kenya becomes a republic with Jomo Kenyatta as first president</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1978</div>
+                    <div class="timeline-content">
+                        <h4>Moi Presidency</h4>
+                        <p>Daniel arap Moi becomes president after Kenyatta's death</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2002</div>
+                    <div class="timeline-content">
+                        <h4>Democratic Transition</h4>
+                        <p>Mwai Kibaki elected president, ending KANU's 39-year rule</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h4>New Constitution</h4>
+                        <p>Kenya adopts new constitution devolving power to counties</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2013</div>
+                    <div class="timeline-content">
+                        <h4>Uhuru Presidency</h4>
+                        <p>Uhuru Kenyatta begins his first term as president</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h4>Ruto Presidency</h4>
+                        <p>William Ruto elected as fifth president of Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h3>Stay Updated with Kenyan History</h3>
+                <p>Subscribe to our newsletter for the latest documentaries and historical insights</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Peterson Documentaries is dedicated to preserving and sharing the rich history of Kenya through comprehensive research and engaging storytelling.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#presidents">Presidents</a></li>
+                    <li><a href="#history">Kenyan History</a></li>
+                    <li><a href="#timeline">Historical Timeline</a></li>
+                    <li><a href="#about">About Project</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Box 2738-40100, Kisumu.<br>Mega City, 4 0123, 40123</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <div>+254112696334</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>petersonadipo@gmail.com</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to receive updates on new documentaries and research.</p>
+                <form class="newsletter-form" id="footerNewsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Peterson Documentaries. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
